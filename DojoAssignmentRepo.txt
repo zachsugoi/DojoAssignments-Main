@@ -10,3 +10,7 @@ git status
 git add readme.txt
 git commit -m "added readme.txt"
 git push origin master
+git status
+git add .
+git commit -m "added DojoAssignmentRepo.txt"
+git push origin master
