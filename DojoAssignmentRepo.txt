@@ -1,0 +1,12 @@
+cd Desktop
+cd DojoAssignments
+git init
+git add .
+git commit -m "Initiated repo and added all existing files"
+git remote add origin https://github.com/zachsugoi/DojoAssignments.git
+git push origin master
+copy NUL readme.txt
+git status
+git add readme.txt
+git commit -m "added readme.txt"
+git push origin master
