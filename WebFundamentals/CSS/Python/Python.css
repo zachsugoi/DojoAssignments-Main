@@ -1,0 +1,150 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#top_wrapper{
+  width: 970px;
+  background-color: #2B547E;
+  padding: 15px;
+  color: white;
+  border-bottom:solid #2B3856;
+
+}
+#text_size{
+  font-size: .75em;
+  text-align: right;
+}
+  #text_size a{
+    color: gold;
+  }
+  #vertical_bar{
+    color: black;
+  }
+
+#logo{
+  width: 320px;
+  height: auto;
+  display: inline-block;
+  text-align: left;
+}
+#search_area{
+  width: 250px;
+  background-color: #2C3539;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 2px 2px 2px black;
+  padding: 10px 30px;
+  text-align: center;
+  vertical-align: top;
+  position: relative;
+  left: 320px;
+  top: 10px;
+}
+  #search_bar{
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    font-size: .6em;
+  }
+  #button{
+    background-color: #2B547E;
+    border-radius: 5px;
+    padding: 5px 8px;
+    color: white;
+    font-size: .6em;
+    box-shadow: 1px 1px 1px black;
+  }
+#menu{
+  margin: 10px 30px;
+  width: 910px;
+  padding: 10px;
+  text-align: center;
+  background-color: #357EC7;
+  border-radius: 5px;
+  word-spacing: 50px;
+  box-shadow: 2px 2px 2px black;
+}
+
+#navigation{
+  text-align: center;
+  list-style-position: inside;
+  display:inline-block;
+  width: 250px;
+  padding: 15px;
+  line-height: 1.75;
+  vertical-align: top;
+  font-size: .8em;
+}
+  #navigation a{
+    color: white;
+    margin: 0px -10px;
+  }
+#main_content{
+  text-align: center;
+  display:inline-block;
+  font-size: .75em;
+  width: 560px;
+  padding: 15px;
+}
+.phrases{
+  color: gold;
+  font-size: 1.2em;
+  line-height: 2;
+  font-style: italic;
+}
+#zen_of_python{
+  font-size: 1em;
+}
+
+#mid_wrapper{
+  width: 970px;
+  background-color: white;
+  padding: 10px;
+  font-size: .75em;
+}
+  #mid_wrapper h3{
+    padding: 5px;
+  }
+  #mid_wrapper ul li{
+    list-style-type: square;
+    margin: 0px 60px;
+  }
+  .mid_bullets{
+    color: #87AFC7;
+  }
+#getting_started{
+  width: 350px;
+  border-top: 3px solid #357EC7;
+  display: inline-block;
+  margin: 0px 10px 0px 80px;
+  padding: 0px 30px 0px 10px;
+  vertical-align: top;
+  text-align: center;
+}
+#applications{
+  width: 350px;
+  border-top: 3px solid #357EC7;
+  display: inline-block;
+  margin: 0px 15px 0px 0px;
+  padding: 0px 30px 0px 10px;
+  text-align: center;
+}
+
+#bot_wrapper{
+  width: 970px;
+  background-color: #2B547E;
+  color: #87AFC7;
+  padding: 10px;
+  text-align: center;
+}
+#footer_nav{
+  padding: 20px 0px 10px;
+  font-size: .85em;
+}
+.footer_nav_content{
+  padding: 20px;
+}
+#copyright{
+  font-size: .5em;
+}

@@ -1,0 +1,181 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Helvetica, sans-serif;
+}
+#top_container{
+  width: 1050px;
+  padding: 15px;
+  background-color: #E5E4E2;
+}
+  #search_icon{
+    display: inline-block;
+    float:right;
+  }
+#corp_button{
+  margin: 10px 0px 0px 500px;
+  background: linear-gradient(#0041C2,#15317E);
+  color: white;
+  font-size: .7em;
+  border-radius: 10px 0px 0px 10px;
+  padding: 5px 25px 5px 5px;
+  display:inline-block;
+  vertical-align: top;
+}
+#search_field{
+  margin: 10px 0px 0px 45px;
+  border-radius: 5px;
+  display:inline-block;
+  vertical-align: top;
+}
+table{
+  width: 600px;
+  font-size: .75em;
+  text-align: right;
+}
+#mid_container{
+  width:1080px;
+  background: linear-gradient(#0041C2,#15317E)
+}
+#manage_your_account{
+  border-color: white;
+  width: 300px;
+  margin: 15px 20px;
+  display:inline-block;
+  position: relative;
+}
+  #manage_header{
+    color:white;
+    text-shadow: 1px 1px black;
+    background: linear-gradient(#15317E,#0041C2);
+    text-align:center;
+    padding: 5px 10px;
+  }
+  #login{
+    background-color: #CFECEC;
+    padding: 15px;
+  }
+    #login label{
+      display:block;
+      font-size: .9em;
+      font-weight: bold;
+    }
+    #login input{
+      display:block;
+      border-radius: 5px;
+      height: 25px;
+      margin: 5px 0px;
+    }
+    #login p{
+      font-size:.75em;
+      color: #157DEC;
+      font-weight: bold;
+      display:block;
+    }
+    #login a{
+      text-decoration: none;
+      display:inline-block;
+      font-size: .85em;
+    }
+    #sign_in{
+      color:white;
+      padding: 3px 15px;
+      background-color: gray;
+      border-style: outset;
+      display:inline-block;
+    }
+  #new_cust{
+    width: 300px;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    display:block;
+    border-color: white;
+    background: linear-gradient(#15317E,#0041C2);
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 1.25em;
+    font-family:arial,sans-serif;
+  }
+  #news_update{
+    margin: 10px 0px;
+    width: 1040px;
+    text-align: left;
+    padding: 10px 20px;
+    background-color: #CFECEC;
+    font-weight: bold;
+    font-size: .8em;
+  }
+    #news_update a{
+      text-decoration: none;
+      color: #157DEC;
+    }
+.blue_text{
+  color: #157DEC;
+  font-weight: normal;
+}
+#data_center{
+  margin: 0px 10px 0px 30px;
+  width: 275px;
+  display:inline-block;
+  padding: 15px;
+  background-color: white;
+  font-weight: bold;
+}
+  #data_center p{
+    margin-left: 5px;
+    width:185px;
+    display: inline-block;
+    font-size: .75em;
+    vertical-align: top;
+  }
+#green_solutions{
+  margin: 0px 10px 0px 10px;
+  width: 275px;
+  display:inline-block;
+  padding: 15px;
+  background-color: white;
+  font-weight: bold;
+  vertical-align: top;
+}
+  #green_solutions p{
+    margin-left: 5px;
+    width:185px;
+    display: inline-block;
+    font-size: .75em;
+    vertical-align: top;
+  }
+#promise{
+  margin: 0px 10px 0px 10px;
+  width: 275px;
+  display:inline-block;
+  padding: 15px;
+  background-color: white;
+  font-weight: bold;
+  vertical-align: top;
+}
+  #promise p{
+    margin-left: 5px;
+    width:155px;
+    display: inline-block;
+    font-size: .75em;
+    vertical-align: top;
+  }
+
+#footer{
+  width: 1070px;
+  background-color: lightgrey;
+  font-weight: lighter;
+  font-size: .8em;
+  padding: 5px 0px 5px 10px;
+}
+  #footer_nav{
+    display:inline-block;
+  }
+  #nyse{
+    display:inline-block;
+    float:right;
+    padding-right: 10px;
+  }
+  #tick{
+    color:green;
+  }
