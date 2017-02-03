@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My First jQuery Assignment, y'all!</title>
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#AddClass input[type='button']").click(function(){
+          $("#AddClass p").addClass("red");
+          $("#AddClass input[type='button']").val("You did it!");
+          $("#AddClass p").text("Now I may be color blind, but my friends tell me this is red.")
+        });
+        $("#SlideToggle button").click(function(){
+          $("#SlideToggle img").slideToggle();
+        });
+        $("#Append button").click(function(){
+          $("#Append").append("<p>See? What'd I tell you.</p>");
+        });
+        $("#cat_button1").click(function(){
+          $("#Cat1").slideUp();
+        });
+        $("#cat_button2").click(function(){
+          $("#Cat2").attr("style","display:none");
+          $("#Cat2").slideDown();
+        });
+        $("#cat_button3").click(function(){
+          $("#Cat3").fadeIn();
+        });
+        $("#cat_button4").click(function(){
+          $("#Cat4").fadeOut();
+        });
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="jQuery Functions.css">
+  </head>
+  <body>
+    <div id="AddClass">
+      <h1>AddClass</h1>
+      <input type="button" value="AddClass">
+      <p>Click the button to add class 'red' to this paragraph</p>
+    </div>
+    <div id="SlideToggle">
+      <h1>SlideToggle</h1>
+      <img src="http://www.weirdhut.com/wp-content/uploads/2013/01/Funny-Cat-tongue.jpg" height=200px style="display:none">
+      <button>SlideToggle</button>
+      <p>Click the button to slidetoggle a hidden image</p>
+    </div>
+    <div id="Append">
+      <h1>Append</h1>
+      <button>Append</button>
+      <p>Click the button to append a new paragraph!</p>
+    </div>
+    <div id="Appear_Disappear">
+      <h1>Make This Cat Come and Go</h1>
+      <button id="cat_button1">SlideUp</button>
+      <img id="Cat1" src="http://www.weirdhut.com/wp-content/uploads/2012/11/Cats-Sleeping-In-Strange-Places.jpg" width=150px>
+      <button id="cat_button2">SlideDown</button>
+      <img id="Cat2" src="http://www.weirdhut.com/wp-content/uploads/2012/11/Cats-Sleeping-In-Strange-Places.jpg" width=150px style="visibility:hidden">
+      <button id="cat_button3">FadeIn</button>
+      <img id="Cat3" src="http://www.weirdhut.com/wp-content/uploads/2012/11/Cats-Sleeping-In-Strange-Places.jpg" width=150px style="display:none">
+      <button id="cat_button4">FadeOut</button>
+      <img id="Cat4" src="http://www.weirdhut.com/wp-content/uploads/2012/11/Cats-Sleeping-In-Strange-Places.jpg" width=150px>
+    </div>
+  </body>
+</html>

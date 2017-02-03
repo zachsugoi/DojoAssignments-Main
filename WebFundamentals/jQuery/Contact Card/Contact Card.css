@@ -1,0 +1,25 @@
+form{
+  width: 400px;
+  display:inline-block;
+  vertical-align: top;
+}
+  label{
+    display:block;
+  }
+  #description{
+    height: 40px;
+    width: 240px;
+    margin: 15px 0px;
+  }
+#contacts_column{
+  display:inline-block;
+}
+.card{
+  display:block;
+  vertical-align: top;
+  height: 75px;
+  width:auto;
+  border: thin solid black;
+  box-shadow: 2px 2px 2px;
+  margin: 0px 0px 30px;
+}

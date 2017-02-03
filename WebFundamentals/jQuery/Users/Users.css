@@ -1,0 +1,21 @@
+table{
+  border: thin solid black;
+}
+  th{
+    padding-right: 30px;
+  }
+form{
+  width: 350px;
+}
+  h1{
+    border-bottom: solid black;
+  }
+  label{
+    display: inline-block;
+    margin: 5px 0px;
+    float:right;
+  }
+  input[type="submit"]{
+    margin:70px 0px 0px 280px;
+    display:block;
+  }

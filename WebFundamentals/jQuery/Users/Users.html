@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" href="Users.css">
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("form").submit(function(){
+          var fn = $("#first_name").val();
+          var ln = $("#last_name").val();
+          var em = $("#email").val();
+          var ct = $("#contact").val();
+          $("tbody").append(function(){
+            return "<tr><td>"+fn+"</td><td>"+ln+"</td><td>"+em+"</td><td>"+ct+"</td></tr>";
+          });
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th>Contact#</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <form>
+      <h1>Add User</h1>
+      <label>First Name:
+        <input type="text" id="first_name" placeholder="First Name">
+      </label>
+      <br>
+      <label>Last Name:
+        <input type="text" id="last_name" placeholder="Last Name">
+      </label>
+      <br>
+      <label>Email Address:
+        <input type="text" id="email" placeholder="Email Address">
+      </label>
+      <br>
+      <label>Contact No.:
+        <input type="text" id="contact" placeholder="Phone #">
+      </label>
+      <br>
+      <input type="submit" value="Add User">
+    </form>
+  </body>
+</html>

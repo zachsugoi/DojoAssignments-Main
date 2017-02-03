@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Cards</title>
+    <link rel="stylesheet" type="text/css" href="Contact Card.css">
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script type='text/javascript'>
+      $(document).ready(function(){
+        $("form").submit(function(){
+          var fn = $("#first_name").val();
+          var ln = $("#last_name").val();
+          var desc = $("#description").val();
+          $("#contacts_column").append(function(){
+            return "<div class='card'><h1>"+fn+" "+ln+"</h1><p>Click for description!</p>"+"<p style='display:none'>"+desc+"</p></div>";
+          });
+          return false;
+        });
+        $(document).on("click",".card",function(){
+          $(this).html(function(){
+            return "<p>"+$(this).children("p[style='display:none']").text()+"</p>";
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <label>First name:
+        <input type="text" id="first_name">
+      </label>
+      <br>
+      <label>Last name:
+        <input type="text" id="last_name">
+      </label>
+      <br>
+      <label for="description">Description:</label>
+      <input type="text_area" id="description" placeholder="Enter description">
+      <br>
+      <input type="submit" value="Add User">
+    </form>
+    <div id="contacts_column">
+    </div>
+  </body>
+</html>
