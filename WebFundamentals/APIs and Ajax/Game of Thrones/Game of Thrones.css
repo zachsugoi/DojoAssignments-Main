@@ -1,0 +1,9 @@
+#houses img{
+  height:150px;
+  width:150px;
+}
+#info_container{
+  border: thin solid black;
+  width: 410px;
+  margin-left: 100px;
+}
