@@ -1,0 +1,27 @@
+*{
+  line-height: 50%;
+}
+h2{
+  margin: 15px;
+}
+p{
+  display: inline-block;
+}
+label{
+  display: block;
+  margin-left: 15px;
+}
+form{
+  display: inline-block;
+}
+input[value='No']{
+  box-shadow: 2px 2px 2px black;
+  background-color: lightgrey;
+  margin: 10px 20px;
+  height: 25px;
+}
+input[value='Yes! I want to delete this']{
+  background-color: red;
+  height: 25px;
+  box-shadow: 2px 2px 2px black;
+}

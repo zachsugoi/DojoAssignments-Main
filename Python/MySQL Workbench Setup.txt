@@ -1,0 +1,10 @@
+USE twitter;
+
+
+
+SELECT *
+
+FROM users
+
+WHERE TRIM(users.last_name) <> 'Iverson'
+;

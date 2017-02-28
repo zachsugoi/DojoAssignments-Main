@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Products | Semi Restful Route Demo</title>
+  </head>
+  <body>
+    <h1>Products</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in products %}
+          <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>${{product.price}}</td>
+            <td><a href="{% url 'products:show' id=product.id %}">Show</a> <span class='barriers'>|</span> <a href="{% url 'products:edit' id=product.id %}">Edit</a> <span class='barriers'>|</span> <form action="{% url 'products:destroy' id=product.id %}" method='post'>{% csrf_token %}<input type='submit' value='Remove'></form></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="{% url 'products:new' %}">Add a new product</a>
+  </body>
+</html>

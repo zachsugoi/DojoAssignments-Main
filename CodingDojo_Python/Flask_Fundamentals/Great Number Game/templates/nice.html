@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Great Number Game!</title>
+    <style type='text/css'>
+      *{
+        text-align: center;
+      }
+      div{
+        width:150px;
+        height:150px;
+        background-color: green;
+        color:white;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      div h2{
+        transform: translateY(50px);
+      }
+      form{
+      transform: translateY(50px);
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Welcome to the Great Number Game</h3>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+    <div>
+      <h2>{{session['randnum']}} was the number!</h2>
+      <form action='/'>
+        <input type='submit' value='Play again!'>
+      </form>
+    </div>
+  </body>
+</html>

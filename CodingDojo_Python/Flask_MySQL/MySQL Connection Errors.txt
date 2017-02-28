@@ -1,0 +1,14 @@
+(_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+Fix: supply correct password in the config dictionary.
+
+(_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (10061)")
+Fix: supply correct port number in config.
+
+(_mysql_exceptions.OperationalError) (1045, "Access denied for user 'rot'@'localhost' (using password: YES)")
+Fix: supply correct user value (notice in error that it is 'rot' instead of 'root'
+
+(_mysql_exceptions.OperationalError) (1049, "Unknown database 'db'")
+Fix: supply correct database value. Here, the database key has corresponding value of 'db' instead of db (which acts as a variable for what is supplied as the database name in server.py)
+
+(_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '12.0.0.1' (10060)")
+Fix: supply the correct DATABASE_URI. Here, the local server ID was changed from 127.0.0.1 to 12.0.0.1

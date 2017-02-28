@@ -1,0 +1,16 @@
+div h1{
+  display: inline-block;
+}
+textarea{
+  width: 300px;
+  overflow-y: scroll;
+}
+div form{
+  display: inline-block;
+}
+p{
+  display: inline-block;
+}
+button{
+  margin-left: 5px;
+}

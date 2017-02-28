@@ -1,0 +1,56 @@
+#header *{
+  display: inline-block;
+}
+#header a{
+  float:right;
+  margin-top: 20px;
+}
+#header h5{
+  margin-left: 50px;
+}
+label{
+  display: block;
+}
+label input{
+  display: block;
+}
+input[value='Post a message']{
+  background-color: blue;
+  color: white;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  margin-left: 515px;
+}
+input[value='Post a comment']{
+  background-color: green;
+  color: white;
+  padding: 3px;
+  box-shadow: 2px 2px 2px black;
+  margin-left: 515px;
+}
+input[name='message']{
+  height: 50px;
+  width: 600px;
+  margin-left: 15px;
+}
+input[name='comment']{
+  height: 40px;
+  margin-left: 40px;
+  width:575px;
+}
+form[action='/deletecomment'], form[action='/deletemessage']{
+  display:inline-block;
+}
+.message{
+  margin-left: 15px;
+}
+.comment{
+  margin-left: 30px;
+}
+p.comment{
+  font-size: .7em;
+  display:inline-block;
+}
+p.message{
+  display:inline-block;
+}

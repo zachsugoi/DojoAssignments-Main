@@ -1,0 +1,12 @@
+form{
+  width:350px;
+  padding:10px;
+  border: 5px solid black;
+}
+label{
+  text-align: left;
+  display:block;
+}
+input{
+  float:right;
+}

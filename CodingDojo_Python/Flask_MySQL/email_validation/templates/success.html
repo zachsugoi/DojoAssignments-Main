@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Success Page</title>
+    <style type='text/css'>
+      div{
+        background-color: green;
+        margin: 10px 15px;
+        width: 350px;
+        border: 3px solid black;
+        padding: 0px 10px;
+        text-align: justify;
+      }
+      .email_list{
+        margin-left: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>The email address you entered ({{ session['submitted_email'] }}) is a VALID email address! Thank you!</p>
+    </div>
+    <h3><u>Email Addresses Entered:</u></h3>
+    {% for email in all_emails %}
+      <p class='email_list'>{{ email['email_address'] }} {{ email['updated_at'] }}</p>
+      <form action='/delete' method='post'>
+        <input type='submit' value='Delete'>
+        <input type='hidden' name='del_email' value="{{ email['email_address'] }}">
+      </form>
+    {% endfor %}
+  </body>
+</html>

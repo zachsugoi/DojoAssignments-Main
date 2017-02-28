@@ -1,0 +1,9 @@
+h3{
+  text-decoration: underline;
+}
+div{
+  display: block;
+}
+label, p{
+  display: inline-block;
+}

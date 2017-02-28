@@ -1,0 +1,17 @@
+h1{
+  display: inline-block;
+}
+a{
+  display: inline-block;
+  margin-left: 150px;
+}
+form{
+  display: inline-block;
+}
+button{
+  display: inline-block;
+  margin-left: 5px;
+}
+p{
+  display: inline-block;
+}

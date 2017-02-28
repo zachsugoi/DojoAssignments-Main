@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product {{product.id}} Info | Semi Restful Route Demo</title>
+    <style type='text/css'>
+      #labels{
+        display: inline-block;
+      }
+      #labels label{
+        display: block;
+        line-height: 200%;
+        font-weight: bold;
+      }
+      #values{
+        display: inline-block;
+        margin-left: 10px;
+        line-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Product {{product.id}}</h1>
+    <div id='labels'>
+      <label>Name:</label>
+      <label>Description:</label>
+      <label>Price:</label>
+    </div>
+    <div id='values'>
+      <p>{{product.name}}</p>
+      <p>{{product.description}}</p>
+      <p>${{product.price}}</p>
+    </div>
+    <p>
+      <a href="{% url 'products:edit' id=product.id %}">Edit</a> |
+      <a href="{% url 'products:index' %}">Back</a>
+    </p>
+  </body>
+</html>

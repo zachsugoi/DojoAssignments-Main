@@ -1,0 +1,37 @@
+#register{
+  border: 3px solid black;
+  width: 360px;
+  margin: 10px 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+#login{
+  border: 3px solid black;
+  width: 300px;
+  margin: 10px 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+h2{
+  line-height: 50%;
+  margin-left: 5px;
+}
+label{
+  display: inline-block;
+  margin: 3px 2px;
+  width: 130px;
+}
+#login label{
+  width: 80px;
+}
+.error{
+  font-size: .7em;
+  color: red;
+}
+input[type='submit']{
+  margin: 5px 2px;
+  display: block;
+}
+input[type='text']{
+  display: inline-block;
+}

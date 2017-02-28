@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <style type='text/css'>
+      *{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <p>{{session['count']}} times.</p>
+    <br>
+    <form action='/add2'>
+      <input type=submit value='+2'>
+    </form>
+    <br>
+    <form action='/reset'>
+      <input type=submit value='Reset'>
+    </form>
+  </body>
+</html>

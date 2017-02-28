@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Full Friends</title>
+  </head>
+  <body>
+    <h1>These are all my friends!</h1>
+    {% with alerts = get_flashed_messages() %}
+      {% if alerts %}
+        {% for alert in alerts %}
+          <p>{{ alert }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form action='/friends' method='post'>
+      <label>First Name:
+        <input type='text' name='first_name'>
+      </label>
+      <label>Last Name:
+        <input type='text' name='last_name'>
+      </label>
+      <label>Email:
+        <input type='text' name='email'>
+      </label>
+      <input type='submit' value='Add friend'>
+    </form>
+    <hr>
+    {% for friend in all_friends %}
+      <p>Name: {{ friend['first_name'] }} {{ friend['last_name'] }}</p>
+      <p>Email: {{ friend['email'] }}</p>
+      <form action='/friends/{{ friend['id'] }}/edit'>
+        <input type='submit' value='Edit'>
+      </form>
+      <form action='/friends/{{ friend['id'] }}/delete' method='post'> <!--Assignment said to make the delete route a post, but I don't think it's necessary but did anyway-->
+        <input type='submit' value='Delete'>
+      </form>
+      <hr>
+    {% endfor %}
+  </body>
+</html>

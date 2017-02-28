@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Secrets</title>
+    {% load staticfiles %}
+    <link rel='stylesheet' href="{% static 'dojo_secrets/css/log_reg.css' %}">
+  </head>
+  <body>
+    <form id='register' action="{% url 'register' %}" method='post'>
+      {% csrf_token %}
+      <h2>Register</h2>
+      {% if messages %}
+        {% for message in messages %}
+          {% if 'first_name' in message.tags %}
+            <p class='error'>{{message}}</p>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <div>
+        <label>First name:</label>
+        <input type='text' name='first_name'>
+      </div>
+      {% if messages %}
+        {% for message in messages %}
+          {% if 'last_name' in message.tags %}
+            <p class='error'>{{message}}</p>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <div>
+        <label>Last name:</label>
+        <input type='text' name='last_name'>
+      </div>
+      {% if messages %}
+        {% for message in messages %}
+          {% if 'email' in message.tags %}
+            <p class='error'>{{message}}</p>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <div>
+        <label>E-mail:</label>
+        <input type='text' name='email'>
+      </div>
+      {% if messages %}
+        {% for message in messages %}
+          {% if 'password' in message.tags %}
+            <p class='error'>{{message}}</p>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <div>
+        <label>Password:</label>
+        <input type='password' name='password'>
+      </div>
+      {% if messages %}
+        {% for message in messages %}
+          {% if 'pass_conf' in message.tags %}
+            <p class='error'>{{message}}</p>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <div>
+        <label>Confirm password:</label>
+        <input type='password' name='pass_conf'>
+        <input type='submit' value='Register'>
+      </div>
+    </form>
+    <form id='login' action="{% url 'login' %}" method='post'>
+      {% csrf_token %}
+      <h2>Log In</h2>
+      {% if messages %}
+        {% for message in messages %}
+          {% if 'login' in message.tags %}
+            <p class='error'>{{message}}</p>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <div>
+        <label>E-mail:</label>
+        <input type='text' name='email'>
+      </div>
+      <div>
+        <label>Password:</label>
+        <input type='password' name='password'>
+      </div>
+      <input type='submit' value='Log In'>
+    </form>
+  </body>
+</html>

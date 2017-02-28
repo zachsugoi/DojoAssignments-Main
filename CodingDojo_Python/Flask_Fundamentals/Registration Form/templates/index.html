@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration form</title>
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static',filename='css/style.css') }}">
+  </head>
+  <body>
+    <h2>Registration</h2>
+    <form action='/check' method="post">
+      {% with email_errors = get_flashed_messages(category_filter=['email']) %}
+        {% if email_errors %}
+          {% for email_error in email_errors %}
+            <p class='error'>{{email_error}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <label>Email:
+        <input type='text' name='email'>
+      </label>
+      <br>
+      {% with fname_errors = get_flashed_messages(category_filter=['first_name']) %}
+        {% if fname_errors %}
+          {% for fname_error in fname_errors %}
+            <p class='error'>{{fname_error}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <label>First Name:
+        <input type='text' name='first_name'>
+      </label>
+      <br>
+      {% with lname_errors = get_flashed_messages(category_filter=['last_name']) %}
+        {% if lname_errors %}
+          {% for lname_error in lname_errors %}
+            <p class='error'>{{lname_error}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <label>Last Name:
+        <input type='text' name='last_name'>
+      </label>
+      <br>
+      {% with password_errors = get_flashed_messages(category_filter=['password']) %}
+        {% if password_errors %}
+          {% for password_error in password_errors %}
+            <p class='error'>{{password_error}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <label>Password:
+        <input type='password' name='password'>
+      </label>
+      <br>
+      {% with passconf_errors = get_flashed_messages(category_filter=['confirm_pass']) %}
+        {% if passconf_errors %}
+          {% for passconf_error in passconf_errors %}
+            <p class='error'>{{passconf_error}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <label>Confirm Password:
+        <input type='password' name='confirm_pass'>
+      </label>
+      <input type='submit' value='Register'>
+    </form>
+    {% with successful = get_flashed_messages(category_filter=['success']) %}
+      {% if successful %}
+        <p id='success'>{{successful}}</p>
+      {% endif %}
+    {% endwith %}
+  </body>
+</html>

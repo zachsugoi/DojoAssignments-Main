@@ -1,0 +1,19 @@
+form{
+  width:300px;
+  height: auto;
+  border: 3px solid black;
+  padding: 5px;
+}
+input[type='text'], select{
+  float:right;
+  vertical-align: middle;
+}
+textarea{
+  width: 290px;
+  height: 50px;
+  overflow-y: scroll;
+}
+label{
+  display: block;
+  margin: 3px 0px;
+}

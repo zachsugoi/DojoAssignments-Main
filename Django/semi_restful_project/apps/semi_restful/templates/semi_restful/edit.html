@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Product {{product.id}} | Semi Restful Route Demo</title>
+  </head>
+  <body>
+    <h1>Edit Product {{product.id}}</h1>
+    <form action="{% url 'products:update' id=product.id %}" method='post'>
+      {% csrf_token %}
+      <label>Name</label>
+      <input type='text' onFocus="this.value='{{product.name}}'" name='name'>
+      <label>Description</label>
+      <input type='text' onFocus="this.value='{{product.description}}'" name='description'>
+      <label>Price</label>
+      <input type='text' onFocus="this.value='{{product.price}}'" name='price'>
+      <input type='submit' value='Update'>
+    </form>
+    <p>
+      <a href="{% url 'products:show' id=product.id %}">Show</a> |
+      <a href="{% url 'products:index' %}">Home</a>
+    </p>
+  </body>
+</html>

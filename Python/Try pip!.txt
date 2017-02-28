@@ -1,0 +1,10 @@
+1. pip install Django --this installs the module "Django" for use in Python
+2. pip list --this lists all the modules we have installed
+3. pip install Django 
+	Result: Requirement already statisfied: Django in C:\python27\...
+4. pip freeze --this lists all modules (excluding editables) in requirements format
+5. pip freeze > requirements.txt
+	Result: This created a .txt file called Requirements.txt to Desktop that included the exact output you see when you execute "pip freeze"
+6. pip show Django --this provides generic and summary information about the Django module
+7. pip uninstall Django --this uninstalled all files pertaining to Django. It prompted me to proceed with (y/n) at the end to finish.
+8. pip search Flask --this searches for downloadable packages that contain the word "Flask"

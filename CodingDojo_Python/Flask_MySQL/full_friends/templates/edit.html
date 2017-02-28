@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit {{ edit_friend['first_name'] }} {{ edit_friend['last_name'] }}'s Info</title>
+  </head>
+  <body>
+    <h1>Edit {{ edit_friend['first_name'] }} {{ edit_friend['last_name'] }}'s Info</h1>
+    <h3>Submit the following form to replace entire record:</h3>
+    <form action='/friends/{{ edit_friend['id'] }}' method='post'>
+      <label>First Name:
+        <input type='text' name='first_name'>
+      </label>
+      <label>Last Name:
+        <input type='text' name='last_name'>
+      </label>
+      <label>Email:
+        <input type='text' name='email'>
+      </label>
+      <input type='submit' value='Update Record'>
+    </form>
+  </body>
+</html>

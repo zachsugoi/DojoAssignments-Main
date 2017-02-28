@@ -1,0 +1,14 @@
+label{
+  display:block;
+  margin: 3px 0px;
+}
+input[type='submit']{
+  display: block;
+  background-color: blue;
+  color: white;
+  box-shadow: 2px 2px 2px black;
+}
+.error{
+  color: red;
+  font-size: .7em;
+}

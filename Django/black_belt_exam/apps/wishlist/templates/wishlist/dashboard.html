@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Wish List</title>
+  </head>
+  <body>
+    <h1>Hello, {{logged_in_user.name}}!</h1>
+    <a href="{% url 'logout' %}">Logout</a>
+    <h3>Your Wish List:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Added by</th>
+          <th>Date Added</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in logged_user_wished_products %}
+          <tr>
+            <td><a href="{% url 'wish_items' id=product.id %}">{{product.product}}</a></td>
+            <td>{{product.user.name}}</td>
+            <td>{{product.created_at}}</td>
+            {% if product.user == logged_in_user %}
+              <td><a href="{% url 'delete' id=product.id %}">Delete</a></td>
+            {% else %}
+              <td><a href="{% url 'remove' id=product.id %}">Remove from my Wishlist</a></td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+    <h3>Other Users' Wish List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Added by</th>
+          <th>Date Added</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in other_user_wished_products %}
+          <tr>
+            <td><a href="{% url 'wish_items' id=product.id %}">{{product.product}}</a></td>
+            <td>{{product.user.name}}</td>
+            <td>{{product.created_at}}</td>
+            <td><a href="{% url 'add_wish' id=product.id %}">Add to my Wishlist</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="{% url 'create' %}">Add Item</a>
+  </body>
+</html>
